@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BiliDL - Bilibili Downloader</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <div class="logo">Bili<span>DL</span></div>
+      <h1>Bilibili Video Downloader</h1>
+      <p class="subtitle">Paste a Bilibili video URL to get downloadable information.</p>
+
+      <form id="downloadForm">
+        <label for="url">Bilibili URL</label>
+        <div class="input-row">
+          <input id="url" type="url"
+                 placeholder="https://www.bilibili.com/video/..."
+                 autocomplete="off" required>
+          <button id="fetchBtn" type="submit">Get Video</button>
+        </div>
+      </form>
+
+      <div id="status" class="status hidden"></div>
+
+      <section id="result" class="result hidden">
+        <img id="thumbnail" class="thumbnail" alt="Video thumbnail">
+        <div class="details">
+          <h2 id="title"></h2>
+          <p id="meta"></p>
+          <a id="downloadBtn" class="download-btn" href="#" target="_blank" rel="noopener">
+            Download
+          </a>
+        </div>
+      </section>
+
+      <p class="notice">
+        Only download videos you own or have permission to download. Respect Bilibili's
+        terms and the creator's rights.
+      </p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
